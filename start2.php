@@ -6,21 +6,22 @@
 											
 <?php
 $row = 1; // line number
-$fmil1= 14175;
+$b = 1;
+$fmil[0] = 14175;
 $fp = fopen ("mileage2021.txt","r");
 if (!$fp) {
 	echo "Нет данных за 2021 год!";
 	exit;
 }
 while ($data = fgetcsv ($fp, 100, ";")) {
-	$num = count ($data);
+        $num = 2; // кол-во в строке 0 1 2
+	//$num = count ($data);
 	echo "<tr>";
 	//echo "<tr><td>$row</td>";
 	for ($c=0; $c<$num; $c++) {
 	print "<td>" .$data[$c] . "</td>"; }
-	$fmil2=;
-	$fmil2=$data[1];
-	$dmil[$row]=
+	$fmil[$b] = $data[1];
+        $dmil[$b] = $fmil[$b] - $fmil[$b-1];
 	$row++;   // increase the row counter
 	echo "</tr>\n";
 }
