@@ -7,7 +7,7 @@
 <?php
 $row = 1; // line number
 $b = 0;
-$fmil[0] = 14175;
+//$fmil[0] = 14175;
 $fp = fopen ("mileage2021.txt","r");
 if (!$fp) {
 	echo "Нет данных за 2021 год!";
