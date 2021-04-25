@@ -18,10 +18,12 @@ while ($data = fgetcsv ($fp, 100, ";")) {
 	//$num = count ($data);
 	echo "<tr>";
 	//echo "<tr><td>$row</td>";
-	for ($c=0; $c<$num; $c++) {
-	print "<td>" .$data[$c] . "</td>"; }
+	print "<td>" .$data[0] . "</td><td>" .$data[1] . "</td><td align='left'>" .$data[2] . "</td>" ;
+	//for ($c=0; $c<$num; $c++) {
+	//print "<td>" .$data[$c] . "</td>"; }
 	$fmil[$b] = $data[1];
         $dmil[$b] = $fmil[$b] - $fmil[$b-1];
+	$b++;
 	$row++;   // increase the row counter
 	echo "</tr>\n";
 }
