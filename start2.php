@@ -14,7 +14,7 @@ if (!$fp) {
 	exit;
 }
 while ($data = fgetcsv ($fp, 100, ";")) {
-        $num = 2; // кол-во в строке 0 1 2
+        //$num = 2; // кол-во в строке 0 1 2
 	//$num = count ($data);
 	echo "<tr>";
 	//echo "<tr><td>$row</td>";
