@@ -1,8 +1,8 @@
 											<h1>Mileage in 2021</h1>
 											
 <table border=1>
-<tr><th>Date</th><th>Mileage</th><th>Destination</th></tr>
-<!--<tr><th>Date</th><th>Mileage</th><th>Distance</th><th>Destination</th></tr>-->
+<!--<tr><th>Date</th><th>Mileage</th><th>Destination</th></tr>-->
+<tr><th>Date</th><th>Mileage</th><th>Distance</th><th>Destination</th></tr>
 											
 <?php
 $row = 1; // line number
