@@ -6,7 +6,7 @@
 											
 <?php
 $row = 1; // line number
-$b = 1;
+$b = 0;
 $fmil[0] = 14175;
 $fp = fopen ("mileage2021.txt","r");
 if (!$fp) {
@@ -18,11 +18,13 @@ while ($data = fgetcsv ($fp, 100, ";")) {
 	//$num = count ($data);
 	echo "<tr>";
 	//echo "<tr><td>$row</td>";
-	print "<td>" .$data[0] . "</td><td>" .$data[1] . "</td><td align='left'>" .$data[2] . "</td>" ;
 	//for ($c=0; $c<$num; $c++) {
 	//print "<td>" .$data[$c] . "</td>"; }
 	$fmil[$b] = $data[1];
+	if ($b > 0) {
         $dmil[$b] = $fmil[$b] - $fmil[$b-1];
+	print "<td>" .$data[0] . "</td><td>" .$data[1] . "</td><td align='right'>" .$dmil[$b] . "</td><td align='left'>" .$data[2] . "</td>" ;
+	}
 	$b++;
 	$row++;   // increase the row counter
 	echo "</tr>\n";
