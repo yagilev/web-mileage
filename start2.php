@@ -10,7 +10,7 @@ $b = 0;
 //$fmil[0] = 14175;
 $fp = fopen ("mileage2021.txt","r");
 if (!$fp) {
-	echo "Нет данных за 2021 год!";
+	echo "No data for 2021!";
 	exit;
 }
 while ($data = fgetcsv ($fp, 100, ";")) {
